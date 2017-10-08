@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: Primary App
+server:
+  port: ${PORT:8081}

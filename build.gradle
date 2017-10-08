@@ -1,0 +1,50 @@
+buildscript {
+    ext {
+        springGradlePluginVersion = '1.0.3.RELEASE'
+        springBootVesion = '1.5.7.RELEASE'
+        springIOPlatformVersion = 'Brussels-SR5'
+        springCloudVersion = 'Camden.SR5'
+        pivotalCloudServicesVersion = '1.4.1.RELEASE'
+    }
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVesion}"
+        classpath "io.spring.gradle:dependency-management-plugin:${springGradlePluginVersion}"
+    }
+}
+
+subprojects {
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    // don't apply build config to 'container' folders
+    if (['applications', 'components'].contains(name)) {
+        return
+    }
+
+    apply plugin: 'java'
+    apply plugin: 'io.spring.dependency-management'
+
+    defaultTasks "clean", "build"
+
+    sourceCompatibility = 1.8
+
+    group = 'io.undertree.skel.boot'
+    version = '0.0.1-SNAPSHOT'
+
+    dependencyManagement {
+        imports {
+            mavenBom "io.spring.platform:platform-bom:${springIOPlatformVersion}"
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+            mavenBom "io.pivotal.spring.cloud:spring-cloud-services-dependencies:${pivotalCloudServicesVersion}"
+        }
+    }
+}

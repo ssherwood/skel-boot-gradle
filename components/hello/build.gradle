@@ -1,0 +1,6 @@
+dependencies {
+    compile('org.springframework:spring-webmvc')
+    compile('org.springframework.boot:spring-boot-starter-logging')
+
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
