@@ -16,6 +16,11 @@ public class HelloRecord {
 	protected HelloRecord() {
 	}
 
+	public HelloRecord(Long id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
 	public Long getId() {
 		return id;
 	}

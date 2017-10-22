@@ -1,6 +1,9 @@
 package io.undertree.skel.apps;
 
+import java.util.Optional;
+
 import io.undertree.hello.HelloController;
+import io.undertree.hello.HelloRecord;
 import io.undertree.hello.HelloRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,8 +16,10 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.hamcrest.Matchers.is;
+import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
@@ -29,10 +34,14 @@ public class HelloControllerIntTests {
 	private HelloRepository helloRepository;
 
 	@Test
-	public void test_Something() throws Exception {
-		this.mvc.perform(get("/hello")
-				.accept(MediaType.TEXT_PLAIN))
+	public void test_HelloController_WhenHelloRepositoryFindByIdIs1_Then_ExpectRalphOk() throws Exception {
+		when(helloRepository.findById(1L))
+				.thenReturn(Optional.of(new HelloRecord(1L, "Ralph")));
+
+		this.mvc.perform(get("/hello/1")
+				.accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
-				.andExpect(content().string("Hello!"));
+				.andExpect(jsonPath("$.id", is(1)))
+				.andExpect(jsonPath("$.name", is("Ralph")));
 	}
 }

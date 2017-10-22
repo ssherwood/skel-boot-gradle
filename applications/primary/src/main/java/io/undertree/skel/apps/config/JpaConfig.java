@@ -6,8 +6,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
+@ComponentScan({ "io.undertree.hello" })
 @EnableJpaRepositories({ "io.undertree.hello" })
 @EntityScan({ "io.undertree.hello" })
-@ComponentScan({ "io.undertree.hello" })
 public class JpaConfig {
 }

@@ -1,0 +1,7 @@
+spring:
+  jpa:
+    show-sql: true
+
+management:
+  security:
+    enabled: false
