@@ -1,7 +1,7 @@
 buildscript {
     ext {
         springGradlePluginVersion = '1.0.3.RELEASE'
-        springBootVesion = '1.5.7.RELEASE'
+        springBootVersion = '1.5.7.RELEASE'
         springIOPlatformVersion = 'Brussels-SR5'
         springCloudVersion = 'Camden.SR5'
         pivotalCloudServicesVersion = '1.4.1.RELEASE'
@@ -14,8 +14,11 @@ buildscript {
 
     dependencies {
         classpath "io.spring.gradle:dependency-management-plugin:${springGradlePluginVersion}"
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
     }
 }
+
+defaultTasks "clean", "build"
 
 subprojects {
 
@@ -24,15 +27,13 @@ subprojects {
         jcenter()
     }
 
-    // don't apply build config to 'container' folders
+    // don't apply plugins to 'container' folders to avoid /build outputs
     if (['applications', 'components'].contains(name)) {
         return
     }
 
     apply plugin: 'java'
     apply plugin: 'io.spring.dependency-management'
-
-    defaultTasks "clean", "build"
 
     sourceCompatibility = 1.8
 
