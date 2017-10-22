@@ -2,8 +2,4 @@ dependencies {
     compile('org.springframework:spring-webmvc')
     compile('org.springframework.data:spring-data-jpa')
     compile('org.hibernate:hibernate-entitymanager')
-
-    testCompile('junit:junit')
-    testCompile('org.assertj:assertj-core')
-    testCompile('org.mockito:mockito-core')
 }
