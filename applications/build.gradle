@@ -1,5 +1,12 @@
 // apply to all applications
 subprojects {
+
+    buildscript {
+        dependencies {
+            classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVesion}"
+        }
+    }
+
     apply plugin: "org.springframework.boot"
 
     dependencies {

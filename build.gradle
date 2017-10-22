@@ -13,7 +13,6 @@ buildscript {
     }
 
     dependencies {
-        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVesion}"
         classpath "io.spring.gradle:dependency-management-plugin:${springGradlePluginVersion}"
     }
 }

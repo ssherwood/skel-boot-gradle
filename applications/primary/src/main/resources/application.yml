@@ -1,5 +1,8 @@
 spring:
   application:
     name: Primary App
+  jpa:
+    show-sql: true
 server:
   port: ${PORT:8081}
+
