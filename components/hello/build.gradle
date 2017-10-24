@@ -1,4 +1,5 @@
 dependencies {
+    compile('org.springframework.boot:spring-boot-autoconfigure')
     compile('org.springframework:spring-webmvc')
     compile('org.springframework.data:spring-data-jpa')
     compile('org.hibernate:hibernate-entitymanager')
