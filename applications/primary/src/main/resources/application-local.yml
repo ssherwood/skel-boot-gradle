@@ -5,3 +5,8 @@ spring:
 management:
   security:
     enabled: false
+
+eureka:
+  client:
+    enabled: ${EUREKA_CLIENT:false}
+

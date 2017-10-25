@@ -34,7 +34,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * slice will attempt to wire up JPA and will fail...
  */
 @RunWith(SpringRunner.class)
-@WebMvcTest(value = HelloController.class)
+@WebMvcTest(HelloController.class)
 @ComponentScan(value = {"io.undertree.hello"},
         excludeFilters = {@Filter(type = ASSIGNABLE_TYPE, value = HelloConfig.class)})
 public class HelloControllerIntTests {

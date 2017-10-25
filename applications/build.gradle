@@ -4,6 +4,9 @@ subprojects {
     apply plugin: "org.springframework.boot"
 
     dependencies {
+        compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}")
+        compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
+
         compile('org.springframework.boot:spring-boot-starter')
         compile('org.springframework.boot:spring-boot-starter-web') {
             exclude module: 'spring-boot-starter-tomcat'

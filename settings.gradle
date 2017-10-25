@@ -1,4 +1,6 @@
 rootProject.name = 'skel-boot-gradle'
 
 include 'components:hello'
+include 'components:goodbye'
+
 include 'applications:primary'
