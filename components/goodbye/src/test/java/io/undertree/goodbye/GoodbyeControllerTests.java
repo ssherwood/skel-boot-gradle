@@ -21,10 +21,10 @@ public class GoodbyeControllerTests {
     @Test
     public void given_GoodbyeController_WhenGoodbyeRepositoryFindByIdIs1_Then_ExpectOkRalph() throws Exception {
         when(goodbyeRepository.findById(1L))
-                .thenReturn(Optional.of(new GoodbyeRecord(1L, "Ralph")));
+                .thenReturn(Optional.of(new GoodbyeEntity(1L, "Ralph")));
 
         GoodbyeController controller = new GoodbyeController(goodbyeRepository);
-        ResponseEntity<GoodbyeRecord> response = controller.goodbye(1L);
+        ResponseEntity<GoodbyeEntity> response = controller.oneById(1L);
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isNotNull();
