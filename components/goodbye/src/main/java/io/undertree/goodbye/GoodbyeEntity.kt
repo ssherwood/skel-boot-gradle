@@ -13,8 +13,6 @@ class GoodbyeEntity(
         val id: Long? = -1,
         var name: String? = null) {
 
-    //
-
     companion object {
         fun placeHolder() = 42
     }
