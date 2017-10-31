@@ -23,7 +23,7 @@ class GoodbyeControllerTests {
                 .willReturn(Optional.of(GoodbyeEntity(1L, "Ralph")))
 
         val controller = GoodbyeController(goodbyeRepository)
-        val response = controller.oneById(1L)
+        val response = controller.getOneById(1L)
 
         assertThat(response.statusCode).isEqualTo(HttpStatus.OK)
         assertThat(response.body).isNotNull()
@@ -38,7 +38,7 @@ class GoodbyeControllerTests {
                 .willReturn(Optional.empty())
 
         val controller = GoodbyeController(goodbyeRepository)
-        val response = controller.oneById(1L)
+        val response = controller.getOneById(1L)
 
         assertThat(response.statusCode).isEqualTo(HttpStatus.NOT_FOUND)
     }

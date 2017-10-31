@@ -9,4 +9,3 @@ management:
 eureka:
   client:
     enabled: ${EUREKA_CLIENT:false}
-

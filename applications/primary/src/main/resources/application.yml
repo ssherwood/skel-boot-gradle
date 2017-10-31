@@ -1,6 +1,6 @@
 spring:
   application:
     name: Primary-Boot-App
+
 server:
   port: ${PORT:8081}
-
