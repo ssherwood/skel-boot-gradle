@@ -1,5 +1,6 @@
 package io.undertree.goodbye
 
+import io.undertree.goodbye.GoodbyeController.Companion.RESOURCE_MAPPING
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.http.ResponseEntity
@@ -8,11 +9,11 @@ import org.springframework.web.bind.annotation.*
 import java.net.URI
 
 @RestController
-@RequestMapping(GoodbyeController.Companion.MAPPING)
+@RequestMapping(RESOURCE_MAPPING)
 class GoodbyeController(private val goodbyeRepository: GoodbyeRepository) {
 
     companion object {
-        const val MAPPING = "/goodbye"
+        const val RESOURCE_MAPPING = "/goodbye"
     }
 
     @GetMapping
@@ -22,7 +23,7 @@ class GoodbyeController(private val goodbyeRepository: GoodbyeRepository) {
     @PostMapping
     fun addOne(@RequestBody goodbye: GoodbyeEntity): ResponseEntity<Void> {
         val aGoodbye = goodbyeRepository.save(goodbye)
-        return created(URI.create("$MAPPING/${aGoodbye.id}")).build()
+        return created(URI.create("$RESOURCE_MAPPING/${aGoodbye.id}")).build()
     }
 
     @GetMapping("{id}")

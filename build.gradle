@@ -1,11 +1,10 @@
 buildscript {
     ext {
-        springGradlePluginVersion = '1.0.3.RELEASE'
-        springBootVersion = '1.5.7.RELEASE'
+        kotlinVersion = '1.1.60'
+        springBootVersion = '1.5.8.RELEASE'
         springIOPlatformVersion = 'Brussels-SR5'
-        springCloudVersion = 'Camden.SR5'
+        springCloudVersion = 'Camden.SR7'
         pivotalCloudServicesVersion = '1.4.1.RELEASE'
-        kotlinVersion = '1.1.51'
     }
 
     repositories {
@@ -14,7 +13,6 @@ buildscript {
     }
 
     dependencies {
-        classpath "io.spring.gradle:dependency-management-plugin:${springGradlePluginVersion}"
         classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}"
         classpath "org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}"
