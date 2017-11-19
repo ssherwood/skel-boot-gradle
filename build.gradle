@@ -5,6 +5,7 @@ buildscript {
         springIOPlatformVersion = 'Brussels-SR5'
         springCloudVersion = 'Camden.SR7'
         pivotalCloudServicesVersion = '1.4.1.RELEASE'
+        springFoxVersion = '2.7.0'
     }
 
     repositories {

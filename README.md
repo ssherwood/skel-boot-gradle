@@ -6,7 +6,7 @@ packaging methodologies.
 ## Overview
 
 This project is heavily inspired by the discussion started during the Pivotal
-Platform Acceleration Labs exercises via the [Application Continuum](http://www.appcontinuum.io/)
+Platform Acceleration Lab's exercises via the [Application Continuum](http://www.appcontinuum.io/)
 project.  The theory being that by applying these ideas, we will end up with
 better application architecture(s).
 
@@ -15,7 +15,7 @@ better application architecture(s).
 My goals are limited to exploring alternative ways of thinking about
 application architecture including organization and composition of components.
 As this is somewhat controversial and could be considered an example of
-premature optimization, it does seems worthy of deeper exploration.
+premature optimization, but it does seems worthy of deeper exploration.
 
 ## Observations
 

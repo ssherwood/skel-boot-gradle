@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/hello")
-public class HelloController {
+public class HelloController implements HelloAPI {
 
 	private final HelloRepository helloRepository;
 

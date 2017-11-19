@@ -2,6 +2,7 @@ package io.undertree.skel.apps.config;
 
 import io.undertree.goodbye.EnableGoodbyeComponent;
 import io.undertree.hello.EnableHelloComonent;
+
 import org.springframework.context.annotation.Configuration;
 
 /**

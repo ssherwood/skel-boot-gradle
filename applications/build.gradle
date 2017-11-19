@@ -1,4 +1,4 @@
-// apply to all applications
+// apply to all "applications" subprojects
 subprojects {
 
     apply plugin: "org.springframework.boot"
@@ -13,9 +13,9 @@ subprojects {
         }
         compile('org.springframework.boot:spring-boot-starter-jetty')
         compile('org.springframework.boot:spring-boot-starter-actuator')
-        compile('org.springframework.boot:spring-boot-devtools')
-
+        compile("io.springfox:springfox-swagger-ui:$springFoxVersion")
         compile('org.springframework.cloud:spring-cloud-starter-eureka')
+        compile('org.springframework.boot:spring-boot-devtools')
 
         testCompile('org.springframework.boot:spring-boot-starter-test')
     }
