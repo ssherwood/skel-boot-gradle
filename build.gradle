@@ -1,11 +1,11 @@
 buildscript {
     ext {
-        kotlinVersion = '1.1.60'
-        springBootVersion = '1.5.8.RELEASE'
-        springIOPlatformVersion = 'Brussels-SR5'
-        springCloudVersion = 'Camden.SR7'
-        pivotalCloudServicesVersion = '1.4.1.RELEASE'
-        springFoxVersion = '2.7.0'
+        kotlinVersion = '1.2.20'
+        springBootVersion = '1.5.9.RELEASE'
+        springIOPlatformVersion = 'Brussels-SR6'
+        springCloudVersion = 'Edgware.SR1'
+        pivotalCloudServicesVersion = '1.6.1.RELEASE'
+        springFoxVersion = '2.8.0'
     }
 
     repositories {
