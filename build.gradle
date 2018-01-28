@@ -57,5 +57,9 @@ subprojects {
             mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
             mavenBom "io.pivotal.spring.cloud:spring-cloud-services-dependencies:${pivotalCloudServicesVersion}"
         }
+        dependencies {
+            // todo test this with snyk
+            dependency 'io.netty:netty-handler:4.0.45.Final'
+        }
     }
 }
