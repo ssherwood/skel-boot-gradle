@@ -59,7 +59,7 @@ subprojects {
         }
         dependencies {
             // todo test this with snyk
-            dependency 'io.netty:netty-handler:4.0.45.Final'
+
         }
     }
 }
