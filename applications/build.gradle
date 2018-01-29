@@ -14,6 +14,8 @@ subprojects {
         compile('org.springframework.boot:spring-boot-starter-jetty')
         compile('org.springframework.boot:spring-boot-starter-actuator')
         compile("io.springfox:springfox-swagger-ui:$springFoxVersion")
+        // upgrade for CVE-2016-4970
+        compile('io.reactivex:rxnetty:0.4.20')
         compile('org.springframework.cloud:spring-cloud-starter-eureka')
         compile('org.springframework.boot:spring-boot-devtools')
 

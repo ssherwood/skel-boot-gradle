@@ -3,8 +3,6 @@ dependencies {
     compile project(':components:goodbye')
 
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
-    // upgrade for CVE-2016-4970
-    compile('io.reactivex:rxnetty:0.4.20')
 
     compile("com.h2database:h2")
 }
