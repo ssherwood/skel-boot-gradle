@@ -1,16 +1,16 @@
 buildscript {
     ext {
-        kotlinVersion = '1.2.20'
-        springBootVersion = '1.5.9.RELEASE'
-        springIOPlatformVersion = 'Brussels-SR6'
-        springCloudVersion = 'Edgware.SR1'
+        kotlinVersion = '1.2.21'
+        springBootVersion = '1.5.10.RELEASE'
+        springIOPlatformVersion = 'Brussels-SR7'
+        springCloudVersion = 'Edgware.SR2'
         pivotalCloudServicesVersion = '1.6.1.RELEASE'
         springFoxVersion = '2.8.0'
     }
 
     repositories {
-        mavenCentral()
         jcenter()
+        mavenCentral()
     }
 
     dependencies {
@@ -23,10 +23,9 @@ buildscript {
 defaultTasks "clean", "build"
 
 subprojects {
-
     repositories {
-        mavenCentral()
         jcenter()
+        mavenCentral()
     }
 
     // don't apply plugins to 'container' folders to avoid /build outputs
@@ -59,7 +58,6 @@ subprojects {
         }
         dependencies {
             // todo test this with snyk
-
         }
     }
 }
