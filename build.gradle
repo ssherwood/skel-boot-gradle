@@ -25,6 +25,8 @@ defaultTasks "clean", "build"
 subprojects {
     // update for CVE-2017-5929
     ext['logback.version'] = '1.2.3'
+    // update for HTTPCLIENT-1803
+    ext['ribbon.version'] = '2.2.4'
 
     repositories {
         jcenter()
