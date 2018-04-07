@@ -1,6 +1,7 @@
 // apply to all "components" subprojects
 subprojects {
     dependencies {
+        compile('com.fasterxml.jackson.module:jackson-module-kotlin')
         compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlinVersion")
         compile("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
         compile("io.springfox:springfox-swagger2:$springFoxVersion")

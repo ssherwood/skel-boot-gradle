@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 
 @Configuration
-@EntityScan(basePackageClasses = arrayOf(GoodbyeEntity::class))
-@EnableJpaRepositories(basePackageClasses = arrayOf(GoodbyeRepository::class))
-@ComponentScan(basePackageClasses = arrayOf(GoodbyeController::class))
+@EntityScan(basePackageClasses = [GoodbyeEntity::class])
+@EnableJpaRepositories(basePackageClasses = [GoodbyeRepository::class])
+@ComponentScan(basePackageClasses = [GoodbyeController::class])
 internal class GoodbyeConfig

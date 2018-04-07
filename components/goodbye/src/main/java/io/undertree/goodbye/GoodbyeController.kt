@@ -18,7 +18,7 @@ class GoodbyeController(private val goodbyeRepository: GoodbyeRepository) {
 
     @GetMapping
     fun getAllPaged(page: Pageable): ResponseEntity<Page<GoodbyeEntity>> =
-            ok(goodbyeRepository.findAll(page))
+        ok(goodbyeRepository.findAll(page))
 
     @PostMapping
     fun addOne(@RequestBody goodbye: GoodbyeEntity): ResponseEntity<Void> {
@@ -28,26 +28,26 @@ class GoodbyeController(private val goodbyeRepository: GoodbyeRepository) {
 
     @GetMapping("{id}")
     fun getOneById(@PathVariable id: Long): ResponseEntity<GoodbyeEntity> =
-            goodbyeRepository.findById(id)
-                    .map {
-                        ok(it)
-                    }
-                    .orElseGet {
-                        notFound().build()
-                    }
+        goodbyeRepository.findById(id)
+            .map {
+                ok(it)
+            }
+            .orElseGet {
+                notFound().build()
+            }
 
     @DeleteMapping("{id}")
     fun deleteOneById(@PathVariable id: Long): ResponseEntity<Void> =
-            goodbyeRepository.findById(id)
-                    .map {
-                        goodbyeRepository.delete(it.id)
-                        ok().build<Void>()
-                    }
-                    .orElseGet {
-                        noContent().build()
-                    }
+        goodbyeRepository.findById(id)
+            .map {
+                goodbyeRepository.delete(it.id)
+                ok().build<Void>()
+            }
+            .orElseGet {
+                noContent().build()
+            }
 
     @GetMapping("/name/{name}")
     fun anyByName(@PathVariable name: String, page: Pageable): ResponseEntity<Page<GoodbyeEntity>> =
-            ok(goodbyeRepository.findByName(name, page))
+        ok(goodbyeRepository.findByName(name, page))
 }
